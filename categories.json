@@ -1,0 +1,34 @@
+[
+    {
+        "_id":"categories1",
+        "categories_name": "Dầu ăn",
+        "imagesCategories":"dauan.jpg"
+    },
+
+    {
+        "_id":"categories2",
+        "categories_name": "Thịt,hải sản,rau,củ đông lạnh",
+        "imagesCategories":"donglanh.jpg"
+    },
+    {
+        "_id":"categories3",
+        "categories_name": "Rau sắc màu hỗn hợp",
+        "imagesCategories":"rauhonhop.jpg"
+    }
+    ,{
+        "_id":"categories4",
+        "categories_name": "Sữa tươi Vinamilk",
+        "imagesCategories":"suatuoi.jpg"
+    },
+    {
+        "_id":"categories5",
+        "categories_name": "Nước ép Yooh",
+        "imagesCategories":"nuocepyooh.jpg"
+    },
+    {
+        "_id":"categories6",
+        "categories_name": "Bình đựng nước",
+        "imagesCategories":"binhnuoc.jpg"
+    }
+
+]

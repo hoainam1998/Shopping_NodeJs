@@ -1,0 +1,238 @@
+.billingDetail {
+    padding: 2rem 4rem;
+}
+
+.contentBillingDetail {
+    padding: 2rem 0;
+    margin-top: 1.5rem;
+    border-top: 1px solid #ebebeb;
+    display: grid;
+    grid-template-columns: 60% 37%;
+    grid-column-gap: 30px;
+}
+
+/*===================================
+        Form Infor Customer
+===================================*/
+.formInforCustomer {
+    display: grid;
+    grid-template-columns: repeat(2,48%);
+    grid-gap: 30px;
+}
+
+.formInforCustomer input,
+.formInforCustomer textarea {
+    width: 100%;
+    padding: .5rem 1rem;
+    border: 1px solid #ebebeb;
+    border-radius: 4px;
+    font-size: 17px;
+}
+
+.formInforCustomer label {
+    display: block;
+    color: #1c1c1c;
+    margin-bottom: 15px;
+}
+
+.formInforCustomer label:after {
+    content:'*';
+    color: #dd2222;
+}
+
+.formInforCustomer textarea {
+    height: 100px;
+}
+
+.town,.state,.addressBilling{
+    grid-column: 1/span 2;
+} 
+
+.shipto,.noteOrder {
+    grid-column: 1/ span 2;
+}
+
+.shipto input ,.shipto label {
+    display: inline-block;
+    width: auto;
+}
+
+.shipto label {
+    margin-left: 1.5rem;
+    cursor: pointer;
+}
+
+.shipto label:after {
+    content: ' ';
+}
+
+.inforReceiver {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px;
+    grid-column: 1 /span 2;
+    border: 1px solid #ebebeb;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+}
+
+.nameReceiver {
+    grid-column: 1/ span 2;
+}
+
+.addressReceiver {
+    grid-column: 1/ span 2;
+}
+
+/*===================================
+        End Form Infor Customer
+===================================*/
+
+/*===================================
+        Your Order
+===================================*/
+
+.yourOrder {
+    background: #f5f5f5;
+    padding: 1.5rem;
+    height: 650px;
+}
+
+.captionOrder {
+    font-size: 25px;
+    text-transform: capitalize;
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.oderRow {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-column-gap: 10px ;
+    text-align: center;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.oderRow h3:first-child,.nameOrder {
+    text-align: left;
+    grid-column: 1/ span 2;
+}
+
+.listOrder {
+    padding: 1rem 0;
+    border-bottom: 1px solid #ebebeb;
+    height: 320px; 
+    overflow: auto;
+}
+
+.subtotalOrder, .maintotalOrder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ebebeb;
+    font-size: 18px;
+}
+
+#maintotalOrder {
+    color: #dd2222;
+}
+
+.yourOrder input[type="submit"]{
+    margin-top: 2rem;
+    border: none;
+    padding: .7rem 1.5rem;
+    color: white;
+    text-transform: uppercase;
+    background: var(--primarycolor);
+    width: 100%;
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+}
+/*===================================
+        End Your Order
+===================================*/
+
+/*===================================
+        PopUp Pay 
+===================================*/
+.popUpPay {
+    position: fixed;
+    top: 0; left:0;
+    width: 100%; height: 100%;
+    display: none;
+}
+
+.contnetPopUpPay {
+    position: absolute;
+    top: 50%; left:50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background: white;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.contnetPopUpPay img {
+    width: 80px; height: 80px;
+}
+
+.contnetPopUpPay h1 {
+    font-size: 25px;
+    margin: 1rem 0;
+    text-transform: uppercase;
+}
+
+.contnetPopUpPay .tk {
+    font-size: 17px;
+}
+
+.btns_controlPopUpPay {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-top: 1rem;
+}
+
+.btns_controlPopUpPay a {
+    display: inline-block;
+    padding: .5rem .7rem;
+    color: white;
+    background: var(--primarycolor);
+    font-size: 17px;
+}
+/*===================================
+        End PopUp Pay 
+===================================*/
+
+@media(max-width:768px){
+    .billingDetail {padding: 2rem}
+
+    .contentBillingDetail {
+        grid-template-columns: 45% 50%;
+    }
+
+    .formInforCustomer .firstName,
+    .formInforCustomer .lastName,
+    .formInforCustomer .tel,
+    .formInforCustomer .email {
+        grid-column: 1/3;
+    }
+}
+
+@media(max-width:768px){
+    .billingDetail { padding: 1rem;}
+
+    .contentBillingDetail { grid-template-columns: 1fr; grid-row-gap: 30px;}
+
+    .formInforCustomer {
+       grid-template-columns: 1fr;
+    }
+
+    .yourOrder { height: auto;}
+}

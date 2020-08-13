@@ -1,0 +1,52 @@
+<%- include ('../partials/breadCrumbs.ejs') %>
+<main class="shop">
+    <section class="contentShop">
+        <button class="filter"><i class="fas fa-filter"> Loc</i></button>
+        <section class="sideControl">
+            <div class="department">
+                <h2 class="captionSideControl">Department</h2>
+                <ul class="listDepartment">
+                    <li class="itemDepartment"><a href="/api/products">All</a></li>
+                </ul>
+            </div>
+            <div class="bnts_price">
+                <h2 class="captionSideControl">Price</h2>
+            </div>
+        </section>
+        <section class="products">
+            <div class="saleOff">
+                <h1 class="captionSaleOff">Sale off</h1>
+                <h2 class="listSaleOffLength"><b style="color: black">2</b> sale off</h2>
+                <div class="productSaleOff">
+                </div>
+                <div class="btns_controlSliderSaleOff">
+                    <button class="previous_saleoff"><i class="fas fa-angle-left"></i></button>
+                    <button class="next_saleoff"><i class="fas fa-angle-right"></i></button>
+                </div>
+            </div>
+            <div class="productAccossCategories">
+                <div class="controlProduct_Categories">
+                    <div class="sort">
+                        <span class="captionProduct_Categories">Sort</span>
+                        <select name="selectSort">
+                            <option value=0>Sap xep theo:</option>
+                            <option value=1>Gia tang dan</option>
+                            <option value=-1>Gia giam dan</option>
+                        </select>
+                    </div>
+                    <div class="found">
+                        <span id="valueNumberFound">10</span>
+                        <span class="captionProduct_Categories">Products found</span>
+                    </div>
+                    <div class="btns_displayProduct_Categories">
+                        <button class="display" id="grid"><i class="fas fa-th-large"></i></button>
+                        <button class="display" id="list"><i class="fas fa-list"></i></button>
+                    </div>
+                </div>
+                <div class="product_Categories renderGrid">
+
+                </div>
+            </div>
+        </section>
+    </section>
+</main>

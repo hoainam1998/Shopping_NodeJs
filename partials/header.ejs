@@ -1,0 +1,67 @@
+<header>
+    <div class="infor_contact">
+        <div class="emailAndOrder">
+            <i class="fas fa-envelope"></i>
+            <span>hello@colorlib.com</span>
+            <span>Free Shipping for all Order of $99</span>
+        </div>
+
+        <div class="contact_header">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-pinterest-p"></i>
+        </div>
+    </div>
+    <div class="logo_menu_link">
+        <img src="/images/logo.png" alt="logo">
+        <ul class="list_headerLink">
+            <li class="linkHeaderItem"><a href="/">home</a></li>
+            <li class="linkHeaderItem"><a href="/shop">shop</a></li>
+            <li class="linkHeaderItem"><a href="/contact">contact</a></li>
+        </ul>
+        <div class="favourite_cart">
+            <button class="favourite">
+                <i class="fas fa-heart"></i>
+                <span id="favoritelength">1</span>
+            </button>
+            <a href="/shopping/cart" class="cart">
+                <i class="fa fa-shopping-bag"></i>
+                <span id="cartlength">3</span>
+            </a>
+            <span class="total">total: <span id="totalHeader">$15.000</span></span>
+        </div>
+    </div>
+    <div class="categories_search_phone_banner">
+        <div class="categories">
+            <button class="titleCategories">
+                <i class="fas fa-bars"></i>
+                <span class="captionCategories">all departments</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <ul class="listcategories">
+                <!--render from ajax--> 
+            </ul>
+        </div>
+        <div class="search">
+            <form action="/api/search" method="POST" autocomplete="off">
+                <input type="text" name="search" placeholder="What do you need?" required>
+                <button type="submit">Search</button>
+                <span class="hideListSearch"><i class="fas fa-times"></i></span>
+            </form>
+            <ul class="listResult">
+
+            </ul>
+        </div>
+        <div class="phone">
+            <span class="phoneIcon">
+                <i class="fas fa-phone-alt"></i>
+            </span>
+            <span class="inforservice">
+                <span class="phonenumber">+65 11.188.888</span></br>
+                <span class="support">support 24/7 time</span>
+            </span>
+        </div>
+        <button class="mobileBar"><i class="fas fa-bars"></i></button>
+    </div>
+</header>

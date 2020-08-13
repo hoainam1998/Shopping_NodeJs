@@ -1,0 +1,79 @@
+<%- include ('../partials/breadCrumbs.ejs') %>
+<main class="shoppingCart">
+    <section class="contentShoppingCart">
+        <div class="cartrow noborder">
+            <h2 class="titleProduct">Product</h2>
+            <h2>Price</h2>
+            <h2>Quantity</h2>
+            <h2>Total</h2>
+        </div>
+        <ul class="listcart">
+            <li class="cartrow">
+                <img src="../images/binhnuoc.jpg" alt="img">
+                <span class="name">binh nuoc</span>
+                <b class="price">15.000 d</b>
+                <input type="number" name="qunatity">
+                <b class="totalcart">150000 d</b>
+                <span class="remove"><i class="fas fa-times"></i></span>
+            </li>
+            <li class="cartrow">
+                <img src="../images/binhnuoc.jpg" alt="img">
+                <span class="name">binh nuoc</span>
+                <b class="price">15.000 d</b>
+                <input type="number" name="qunatity">
+                <b class="totalcart">150000 d</b>
+                <span class="remove"><i class="fas fa-times"></i></span>
+            </li>
+            <li class="cartrow">
+                <img src="../images/binhnuoc.jpg" alt="img">
+                <span class="name">binh nuoc</span>
+                <b class="price">15.000 d</b>
+                <input type="number" name="qunatity">
+                <b class="totalcart">150000 d</b>
+                <span class="remove"><i class="fas fa-times"></i></span>
+            </li>
+            <li class="cartrow">
+                <img src="../images/binhnuoc.jpg" alt="img">
+                <span class="name">binh nuoc</span>
+                <b class="price">15.000 d</b>
+                <input type="number" name="qunatity">
+                <b class="totalcart">150000 d</b>
+                <span class="remove"><i class="fas fa-times"></i></span>
+            </li>
+            <li class="cartrow">
+                <img src="../images/binhnuoc.jpg" alt="img">
+                <span class="name">binh nuoc</span>
+                <b class="price">15.000 d</b>
+                <input type="number" name="qunatity">
+                <b class="totalcart">150000 d</b>
+                <span class="remove"><i class="fas fa-times"></i></span>
+            </li>
+        </ul>
+    </section>
+    <section class="couponAndCheckOut">
+        <div class="coupon">
+            <a href="/shop" class="continue">continue shopping</a>
+            <h2>Discount Codes</h2>
+            <p class="note">Discount code does not apply to this product</p>
+            <form class="actionCouponCode">
+                <input type="text" name="coupon" placeholder="Enter your coupon code">
+                <input type="submit" name="submit" value="APPLY COUPON">
+            </form>
+        </div>
+        <div class="checkout">
+            <h2>Cart total</h2>
+            <div class="subtotal"><b>Subtotal</b><span id="subtotal">450.000d</span></div>
+            <div class="maintotal"><b>Total</b><span id="total">450.000d</span></div>
+            <a href="/billingDetail" class="toCheckout">proceed to checkout</a>
+        </div>
+    </section>
+    <section class="popUpNotProductInCart">
+        <div class="contentPopUpNotProductInCart">
+            <h1>Khong co san pham nao trong gio hang</h1>
+            <div class="btns_controlPopUp">
+                <a href="/shop">Mua sam</a>
+                <button>Tat</button>
+            </div>
+        </div>
+    </section>
+</main>

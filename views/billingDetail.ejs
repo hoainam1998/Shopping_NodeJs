@@ -1,0 +1,115 @@
+<%- include ('../partials/breadCrumbs.ejs') %>
+<main class="billingDetail">
+    <h2 class="captionBilling">Billing Details</h2>
+    <section class="contentBillingDetail">
+        <form class="formInforCustomer" id="formInforCustomer" action='/api/customer' method="POST">
+            <div class="firstName">
+                <label>First Name</label>
+                <input type="text" name="firstname" required autocomplete="off">
+            </div>
+            <div class="lastName">
+                <label>Last Name</label>
+                <input type="text" name="lastname" required autocomplete="off">
+            </div>
+            <div class="tel">
+                <label>Phone</label>
+                <input type="tel" name="phone" required autocomplete="off" pattern="[0]{1}[0-9]{3}[0-9]{3}[0-9]{3}">
+            </div>
+            <div class="email">
+                <label>Email</label>
+                <input type="text" name="email" required autocomplete="off">
+            </div>
+            <div class="town">
+                <label>Town/City</label>
+                <input type="text" name="town" required autocomplete="off">
+            </div>
+            <div class="state">
+                <label>Country/State</label>
+                <input type="text" name="country" required autocomplete="off">
+            </div>
+            <div class="addressBilling">
+                <label>Address</label>
+                <textarea name="address"></textarea>
+            </div>
+            <div class="shipto">
+                <input type="checkbox" name="shiptodifference" value="false">
+                <label style="margin-bottom: 0px;">Ship to different address?</label>
+            </div>
+            <div class="inforReceiver">
+                <div class="nameReceiver">
+                    <label>Name</label>
+                    <input type="text" name="nameReceiver" placeholder="e.g Nguyen Hoai Nam" >
+                </div>
+                <div class="phoneReceiver">
+                    <label>Phone</label>
+                    <input type="tel" name="phoneReceiver" pattern="[0]{1}[0-9]{3}[0-9]{3}[0-9]{3}">
+                </div>
+                <div class="emailReceiver">
+                    <label>Email</label>
+                    <input type="mail" name="emailReceiver">
+                </div>
+                <div class="townReceiver">
+                    <label>Town</label>
+                    <input type="town" name="townReceiver">
+                </div>
+                <div class="countryReceiver">
+                    <label>Country</label>
+                    <input type="country" name="countryReceiver">
+                </div>
+                <div class="addressReceiver">
+                    <label>Address</label>
+                    <textarea name="addressReceiver"></textarea>
+                </div>
+            </div>
+            <div class="noteOrder">
+                <label>Note</label>
+                <textarea name="note"></textarea>
+            </div>
+        </form>
+        <div class="yourOrder">
+            <h1 class="captionOrder">your order</h1>
+            <div class="oderRow">
+                <h3>Name</h3>
+                <h3>Price</h3>
+                <h3>Q.ty</h3>
+                <h3>Total</h3>
+            </div>
+            <ul class="listOrder">
+                <li class="oderRow">
+                    <span class="nameOrder">Vegetable’s Package</span>
+                    <span class="priceOrder">15.000 d</span>
+                    <span class="quantityOrder">4</span>
+                    <b class="totalOrder">150.000 d</b>
+                </li>
+                <li class="oderRow">
+                    <span class="nameOrder">Vegetable’s Package</span>
+                    <span class="priceOrder">15.000 d</span>
+                    <span class="quantityOrder">4</span>
+                    <b class="totalOrder">150.000 d</b>
+                </li>
+                <li class="oderRow">
+                    <span class="nameOrder">Vegetable’s Package</span>
+                    <span class="priceOrder">15.000 d</span>
+                    <span class="quantityOrder">4</span>
+                    <b class="totalOrder">150.000 d</b>
+                </li>
+                <li class="oderRow">
+                    <span class="nameOrder">Vegetable’s Package</span>
+                    <span class="priceOrder">15.000 d</span>
+                    <span class="quantityOrder">4</span>
+                    <b class="totalOrder">150.000 d</b>
+                </li>
+            </ul>
+            <div class="subtotalOrder">
+                <b>Subtotal</b>
+                <b id="subtotalOrder">150,000 d</b>
+            </div>
+            <div class="maintotalOrder">
+                <b>Total</b>
+                <b id="maintotalOrder">150,000 d</b>
+            </div>
+            <input type="submit" form="formInforCustomer" name="order" value="place order" id="submitFormInforCustomer">
+        </div>
+    </section>
+    <%- include ('../partials/popUpPay.ejs') %>
+</main>
