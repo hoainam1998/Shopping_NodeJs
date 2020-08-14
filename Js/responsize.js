@@ -13,6 +13,8 @@ $(document).ready(function () {
         responsizeProduct()
         responsizeSearch()
         changeDisplaySideControl()
+        addEventForShop()
+        addEventForSideControlShop()
     })
 
     function responsizeHeader() {
@@ -61,27 +63,28 @@ $(document).ready(function () {
     }
 
     function addEventForSideControlShop() {
+        if ($(window).width() <= 767) {
+            $('.filter').click(function () {
+                $('.sideControl').slideToggle();
+            })
 
-        $('.filter').click(function () {
-            $('.sideControl').slideToggle();
-        })
-
-        $('.sideControl').click(function () {
-            $(this).slideUp();
-        })
+            $('.sideControl').click(function () {
+                $(this).slideUp();
+            })
+        }
     }
 
     function addEventForShop() {
-        $('.shop').click(function (evt) {
-            console.log(evt.target);
-            if (!$(evt.target).is($('.fa-filter'))) {
-                $('.sideControl').slideUp();
-            }
-        })
+        if ($(window).width() <= 767) {
+            $('.shop').click(function (evt) {
+                if (!$(evt.target).is($('.fa-filter'))) {
+                    $('.sideControl').slideUp();
+                }
+            })
+        }
     }
 
     function addEventForSideMenu() {
-
         $('.sideMenu').click(function (evt) {
             if ($(evt.target).is($(this))) {
                 $(this).removeClass('showSideMenu');

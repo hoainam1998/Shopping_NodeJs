@@ -429,8 +429,8 @@ $(document).ready(function () {
     }
 
     function renderProductFavorite(product) {
-        return `<a href="#" class="productFavorite">
-                  <img src="../images/${product.image}" alt="imgproduct">
+        return `<div class="productFavorite">
+                <a href="/productDetail?id_product=${product._id}"><img src="../images/${product.image}" alt="imgproduct"></a>
                   <div class="btns-controlFavoriteProduct">
                       <button class="dots-btn">
                           <i class="fas fa-ellipsis-h"></i>
@@ -441,7 +441,7 @@ $(document).ready(function () {
                       </div>
                   </div>
                   <div class="inforFavoriteProduct">
-                      <h1 class="nameProductFavorite">${product.name}</h1>
+                    <a href="/productDetail?id_product=${product._id}"><h1 class="nameProductFavorite">${product.name}</h1></a>
                       <ul class="listStars starsFavorite">
                           ${renderStarsFavoriteProduct(product.ratemark)}
                       </ul>
@@ -454,7 +454,7 @@ $(document).ready(function () {
                               <span class="newPrice">${product.newPrice.toLocaleString('it-IT', { style: 'currency', currency: 'VND' })} </span>
                           </h3>`}
                       </div>
-                </a>`
+                </div>`
     }
 
     function addStyleforProductFavorite() {

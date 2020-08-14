@@ -114,7 +114,6 @@ $(document).ready(function () {
 
   function changeDisplayBreadCum() {
     let lengthBreadCum = $('.breadCrumbs').children().length;
-    console.log(lengthBreadCum);
     if ($(window).width() <= 767) {
         if (lengthBreadCum >= 3) {
             $('.breadCrumbs').css('flex-direction', 'column');
